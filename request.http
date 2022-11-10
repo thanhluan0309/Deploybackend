@@ -1,0 +1,239 @@
+###
+POST http://localhost:8080/Auth/Login
+Content-Type: application/json
+
+{
+    "username":"luan123",
+    "password":"123"
+}
+###
+//update List User
+PUT http://localhost:8080/Auth/63612e27fb9098427b4e7230
+Content-Type: application/json
+
+{
+    "ListEmailRequestJoin":[1,2,3],
+    "ListEmailJoin":[4,5,6]
+   
+}
+###
+//update List Map User
+PUT http://localhost:8080/Auth/updateMap/63666837deb4718624994e86
+Content-Type: application/json
+
+{
+    "Maps":[
+        {
+            "name":"Map tem 1"
+            
+        },{
+           
+            "name":"Map tem 2"
+        },{
+            "name":"Map tem 3"
+         
+        }
+    ]
+   
+}
+###
+//update List Map User
+GET http://localhost:8080/Auth/getAllMapOfUser
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNjY1OTY3M2IzYTUxODYwZGY3NTczZiIsImlhdCI6MTY2NzY1MTk0OH0.XDOo8GNzf3GdAyik88DSerQ79DrAwytJJiSb6oserAw
+
+###
+GET  http://localhost:8080/Auth/
+
+{
+    "username":"luan123444",
+    "password":"123"
+}
+
+
+//test Token
+###
+POST http://localhost:8080/Post/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzMDgzNmU3OGY2YmM2NmI5NjIwY2E4MSIsImlhdCI6MTY2NDUzMTI4N30.wQ9xqBW92zkyd-bmLtFyyoZ55AEbBnQwjQVUGBuWMR8
+
+{
+    "title":"Post 12",
+    "Url":"google.com"
+    
+}
+
+//Get all posts of user
+###
+GET  http://localhost:8080/Post/getAllpost
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYyZmRmMTY5M2FjYmMyOTk5Mzg4NTY5NiIsImlhdCI6MTY2MTMxNTgxNH0.dC4MYvuM0B8zXWd3bETiWEc592C1d6lD4peJoREJKm4
+
+
+
+//Edit post
+###
+PUT http://localhost:8080/Post/633703d101d3851546dae724
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzMDgzNmU3OGY2YmM2NmI5NjIwY2E4MSIsImlhdCI6MTY2NDUzMTI4N30.wQ9xqBW92zkyd-bmLtFyyoZ55AEbBnQwjQVUGBuWMR8
+
+{
+    "title":"Post updatzee2",
+    "Url":"p",
+    "Des":"New dezzzzs",
+    "color":"blue"
+    
+}
+//GetPostsOfUserByMapid
+###
+POST http://localhost:8080/Post/GetPostsOfUserByMapid/6368aae9ba1753ad88fc9c84
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNjY2ODM3ZGViNDcxODYyNDk5NGU4NiIsImlhdCI6MTY2NzY5ODExM30.u4Vv7Zbsi3_jQL8f76CSvNGVyhOtW28r4XN895HmxIY
+
+//Deleted post
+###
+DELETE http://localhost:8080/Post/62fe35052455f17179926b95
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYyZmUyYmUzN2M5NTkwMGFmZWVjNmE1YiIsImlhdCI6MTY2MDgyNDU0N30.UpDi6fq-0CXJk8liSc2zB7B5e9rduKBorQMIBrau4oc
+
+
+###
+POST http://localhost:8080/Post/getOnePost/63079abadbae17fc97148e22
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYyZmUyYmUzN2M5NTkwMGFmZWVjNmE1YiIsImlhdCI6MTY2MDgyNDU0N30.UpDi6fq-0CXJk8liSc2zB7B5e9rduKBorQMIBrau4oc
+
+# Create map
+###
+POST http://localhost:8080/Map/
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNjc1NmViMDQ5N2JhMzRlYWMzYzM0NiIsImlhdCI6MTY2NzcyMTM2M30.C-rLRFL8w7Yi1wwJzuagBBtSaZPB4oitYIfWv8bFrcQ
+
+{
+    "name":"new map"
+    
+}
+// get map by _id
+###
+GET http://localhost:8080/Map/636bcd999f23b3ca8f744105
+Content-Type: application/json
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNmE1ZDc2YTBmZWQ0NzNlYzgyNTE5MiIsImlhdCI6MTY2ODAwNzE4MH0.MC3NVnfqRJkZwDAaeRCM_NY36ZVZIQR7pJdZffU3Cjw
+
+//Get map 
+###
+GET  http://localhost:8080/Map/getAllMapById/
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNjc1NmViMDQ5N2JhMzRlYWMzYzM0NiIsImlhdCI6MTY2NzcxNzgwMX0.ZvuTXjnrYQY6iC9lMrdcFyx1iM0IVJyxbSCNwhN1cxM
+
+//update map by id
+###
+PUT http://localhost:8080/Map/636bcd999f23b3ca8f744105
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNmE1ZDc2YTBmZWQ0NzNlYzgyNTE5MiIsImlhdCI6MTY2ODAwODE2M30._QOci9ADxs2iF9Xm8iBxpudmH9ue-c7agZ3wdk-4pp0
+Content-Type: application/json
+
+{
+    "color":[
+        {
+            "NameColor":"Red",
+            "color":"red"
+        },{
+            "NameColor":"Warning: ",
+            "color":"blue"
+        },{
+            "NameColor":"Dark",
+            "color":"red"
+        }
+           
+    ]
+}
+
+///Deleted Map
+###
+DELETE http://localhost:8080/Map/63691933135b4e69b7a7005c
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYyZmRmMTY5M2FjYmMyOTk5Mzg4NTY5NiIsImlhdCI6MTY2MTMxNTgxNH0.dC4MYvuM0B8zXWd3bETiWEc592C1d6lD4peJoREJKm4
+
+///add columns
+###
+POST  http://localhost:8080/columns
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzMDgzNmU3OGY2YmM2NmI5NjIwY2E4MSIsImlhdCI6MTY2NjYxOTUxMH0.haG25S81lpP3ZTwHtFiw5WNigSmBFg-_XCkc8o73K1Y
+Content-Type: application/json
+
+{
+    "id":"idtitle",
+    "title":"Columns temp 2"
+}
+
+///get one columns by _id
+###
+POST  http://localhost:8080/columns/636a5d95a0fed473ec825434
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNmE1ZDc2YTBmZWQ0NzNlYzgyNTE5MiIsImlhdCI6MTY2NzkxODU5M30.yqG3caZMyGQ_tYy7WpyJMmqp7heoe_fjdDq-7sIxrLg
+Content-Type: application/json
+
+///get one columns by id body
+###
+POST  http://localhost:8080/columns/getIdinit
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNmE1ZDc2YTBmZWQ0NzNlYzgyNTE5MiIsImlhdCI6MTY2ODA3MjY1Nn0.0EguGYEt2DFnxfODnXymZs67uJL6hkjOPLTK8xLj14E
+Content-Type: application/json
+
+{
+    "id":"idInit636ccd184c1b4a7736875114"
+}
+
+
+///update columns "636cb92807caf8cdb2c67029"
+###
+PUT  http://localhost:8080/columns/updatetaskid/636cbb2dd87f89ac1186807d
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzNmE1ZDc2YTBmZWQ0NzNlYzgyNTE5MiIsImlhdCI6MTY2ODAxNzM4M30.F4OIWYMreSGJECyLtYEmNv-XZB2WukW1GL2YbGdAxS4
+Content-Type: application/json
+
+{
+   
+    "taskIds": [
+        [
+            "636cb92407caf8cdb2c66fe3"
+        ]
+    ]
+}
+///Delted columns
+###
+DELETE  http://localhost:8080/columns/6341442dcac99df75bf7c1a8
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzMTRjMjdjZWZlOGYxNTkyZTQwOTFiNiIsImlhdCI6MTY2MjMwNDg5OX0.No1NNREbCPtY0SdqUjSJvroAW0QW6djmNulEVG9UVtU
+
+
+
+//getALL columns
+###
+GET http://localhost:8080/columns/6368c414bd803eae519e33c9
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzMTRjMjdjZWZlOGYxNTkyZTQwOTFiNiIsImlhdCI6MTY2MjMwNDg5OX0.No1NNREbCPtY0SdqUjSJvroAW0QW6djmNulEVG9UVtU
+
+
+
+///init columnOrder
+###
+POST http://localhost:8080/columnorder
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzMTRjMjdjZWZlOGYxNTkyZTQwOTFiNiIsImlhdCI6MTY2MjMwNDg5OX0.No1NNREbCPtY0SdqUjSJvroAW0QW6djmNulEVG9UVtU
+
+///get all columnOrder
+###
+GET http://localhost:8080/columnorder
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzMTRjMjdjZWZlOGYxNTkyZTQwOTFiNiIsImlhdCI6MTY2MjMwNDg5OX0.No1NNREbCPtY0SdqUjSJvroAW0QW6djmNulEVG9UVtU
+
+
+
+///Update columnOrder
+###
+PUT http://localhost:8080/columnorder/631890ecae04d524eefbba6b
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJVc2VyRXhpdCI6IjYzMTRjMjdjZWZlOGYxNTkyZTQwOTFiNiIsImlhdCI6MTY2MjU1MjM4Nn0.6M0Rld_mKsyBn4E83MP9SXdKNogZSMq5RytP4YIsUuc
+Content-Type: application/json
+
+{
+    "columOrder":[
+        "process",
+        "done"
+    ]
+}
+///SendEmail
+###
+POST http://localhost:8080/sendgmail
+Content-Type: application/json
+
+{
+    "email":"letranthanhluan03092001@gmail.com",
+     "subject": "tesst sendmail 2",
+    "text": "text 2"
+}
