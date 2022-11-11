@@ -19,7 +19,11 @@ const RouterColumns = require("./Router/columns");
 const RouterColumnOrder = require("./Router/columOrder");
 
 app.use(bodyparser.json({ limit: "50mb" }));
-
+// const corsOptions = {
+//   origin: "http://localhost:3000",
+//   credentials: true, //access-control-allow-credentials:true
+//   optionSuccessStatus: 200,
+// };
 
 var whitelist = ['http://localhost:3000', 'https://stalwart-brigadeiros-44505c.netlify.app/']
 var corsOptions = {
@@ -30,7 +34,6 @@ var corsOptions = {
       callback(new Error('Not allowed by CORS'))
     }
   },
-  credentials: true,
   optionSuccessStatus: 200,
 }
 app.use(cors(corsOptions));
