@@ -20,7 +20,7 @@ const RouterColumnOrder = require("./Router/columOrder");
 
 app.use(bodyparser.json({ limit: "50mb" }));
 const corsOptions = {
-  origin: "https://stalwart-brigadeiros-44505c.netlify.app",
+  origin: "http://localhost:3000",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
@@ -75,7 +75,7 @@ app.post("/sendgmail", cors(corsOptions), async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World! back end dacn deploy new");
+  res.send("Hello World! back end dacn");
 });
 
 const port = process.env.PORT || 8080;
