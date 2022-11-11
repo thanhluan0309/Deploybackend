@@ -25,19 +25,20 @@ app.use(bodyparser.json({ limit: "50mb" }));
 //   optionSuccessStatus: 200,
 // };
 
-var whitelist = ['http://localhost:3000', 'https://stalwart-brigadeiros-44505c.netlify.app/']
-var corsOptions = {
-  origin: function (origin, callback) {
-    if (whitelist.indexOf(origin) !== -1) {
-      callback(null, true)
-    } else {
-      callback(new Error('Not allowed by CORS'))
-    }
-  },
-  optionSuccessStatus: 200,
-}
-app.use(cors(corsOptions));
+// var whitelist = ['http://localhost:3000', 'https://stalwart-brigadeiros-44505c.netlify.app/']
+// var corsOptions = {
+//   origin: function (origin, callback) {
+//     if (whitelist.indexOf(origin) !== -1) {
+//       callback(null, true)
+//     } else {
+//       callback(new Error('Not allowed by CORS'))
+//     }
+//   },
+//   optionSuccessStatus: 200,
+// }
+// app.use(cors(corsOptions));
 
+app.use(cors())
 const ConnectDB = async (req, res) => {
   try {
     await mongoose.connect(process.env.Url, {
@@ -60,7 +61,7 @@ app.use("/Map", RouterMap);
 app.use("/columns", RouterColumns);
 app.use("/columnorder", RouterColumnOrder);
 
-app.post("/sendgmail", cors(corsOptions), async (req, res) => {
+app.post("/sendgmail", async (req, res) => {
   let { email, subject, text } = req.body;
   var transporter = nodemailer.createTransport({
     service: "gmail",
