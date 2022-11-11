@@ -33,7 +33,10 @@ var corsOptions = {
     } else {
       callback(new Error('Not allowed by CORS'))
     }
-  }
+  },
+  AccessControlAllowCredentials: true,
+  credentials: true,
+  optionSuccessStatus: 200,
 }
 app.use(cors(corsOptions));
 
