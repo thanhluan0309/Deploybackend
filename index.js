@@ -20,7 +20,7 @@ const RouterColumnOrder = require("./Router/columOrder");
 
 app.use(bodyparser.json({ limit: "50mb" }));
 const corsOptions = {
-  origin: "http://localhost:3000",
+  origin: "https://stalwart-brigadeiros-44505c.netlify.app",
   credentials: true, //access-control-allow-credentials:true
   optionSuccessStatus: 200,
 };
