@@ -75,7 +75,7 @@ app.post("/sendgmail", cors(corsOptions), async (req, res) => {
 });
 
 app.get("/", (req, res) => {
-  res.send("Hello World! back end dacn");
+  res.send("Hello World! back end dacn deploy new");
 });
 
 const port = process.env.PORT || 8080;
