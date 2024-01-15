@@ -18,6 +18,11 @@ const RouterMap = require("./Router/Map");
 const RouterColumns = require("./Router/columns");
 const RouterColumnOrder = require("./Router/columOrder");
 
+
+const RouterProduct = require("./Router/Product");
+const RouterStore = require("./Router/Store");
+
+
 app.use(bodyparser.json({ limit: "50mb" }));
 // const corsOptions = {
 //   origin: "http://localhost:3000",
@@ -60,6 +65,11 @@ app.use("/Post", RouterPost);
 app.use("/Map", RouterMap);
 app.use("/columns", RouterColumns);
 app.use("/columnorder", RouterColumnOrder);
+
+
+app.use("/product", RouterProduct);
+app.use("/store", RouterStore);
+
 
 app.post("/sendgmail", async (req, res) => {
   let { email, subject, text } = req.body;

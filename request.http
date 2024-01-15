@@ -1,3 +1,110 @@
+//Create product
+###
+POST http://localhost:8080/product/create
+Content-Type: application/json
+
+{
+    "productID":"POR3",
+    "name":"123",
+    "picture":"picture",
+    "loai":"loai",
+    "soluong":"100",
+    "status":"Ok",
+    "StoreID":"STID1"
+}
+//Update Product
+###
+PUT http://localhost:8080/product/update
+Content-Type: application/json
+
+{
+    "productID":"luan123",
+    "name":"123",
+    "picture":"picture",
+    "loai":"loai",
+    "soluong":"50",
+    "status":"Ok",
+    "StoreID":"STID1"
+}
+
+//DELETE Product
+###
+POST http://localhost:8080/product/delete
+Content-Type: application/json
+
+{
+    "arraydelted":[
+        {
+             "productID":"POR1",
+                "name":"123",
+                "picture":"picture",
+                "loai":"loai",
+                "soluong":"100",
+                "status":"Ok",
+                "StoreID":"STID1"
+        },
+         {
+             "productID":"POR2",
+                "name":"123",
+                "picture":"picture",
+                "loai":"loai",
+                "soluong":"100",
+                "status":"Ok",
+                "StoreID":"STID1"
+        }
+    ]
+  
+}
+
+//create store
+###
+POST http://localhost:8080/store/create
+Content-Type: application/json
+
+{
+    "StoreID":"STO3",
+    "name":"123",
+    "BranchId":"picture",
+    "status":"OK"
+}
+
+//Update store
+###
+PUT http://localhost:8080/store/update
+Content-Type: application/json
+
+{
+    "StoreID":"STO1",
+    "name":"1234444",
+    "BranchId":"picture",
+    "status":"OK update"
+}
+
+//DELETE store
+###
+POST http://localhost:8080/store/delete
+Content-Type: application/json
+
+{
+    "arraydelted" :[
+{
+       "StoreID":"STO1",
+    "name":"1234444",
+    "BranchId":"picture",
+    "status":"OK update"
+}
+    ]
+ 
+}
+
+
+
+
+
+
+
+
+
 ###
 POST http://localhost:8080/Auth/Login
 Content-Type: application/json
